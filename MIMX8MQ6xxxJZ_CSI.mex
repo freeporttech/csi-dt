@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding= "UTF-8" ?>
+<configuration name="MIMX8MQ6xxxJZ" version="1.7" xsi:schemaLocation="http://mcuxpresso.nxp.com/XSD/mex_configuration_1.7 http://mcuxpresso.nxp.com/XSD/mex_configuration_1.7.xsd" uuid="46cc91b6-afba-4edb-8eee-8a7bbc274a6f" xmlns="http://mcuxpresso.nxp.com/XSD/mex_configuration_1.7" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <common>
+      <processor>MIMX8MQ6xxxJZ</processor>
+      <package>MIMX8MQ6DVAJZ</package>
+      <mcu_data>ksdk2_0</mcu_data>
+      <cores selected="a53_0">
+         <core name="Cortex-A53(core#0)" id="a53_0" description="A53 core0"/>
+         <core name="Cortex-A53(core#1)" id="a53_1" description="A53 core1"/>
+         <core name="Cortex-A53(core#2)" id="a53_2" description="A53 core2"/>
+         <core name="Cortex-A53(core#3)" id="a53_3" description="A53 core3"/>
+         <core name="Cortex-M4F" id="m4" description="M4 core"/>
+      </cores>
+      <description></description>
+   </common>
+   <preferences>
+      <validate_boot_init_only>true</validate_boot_init_only>
+      <generate_extended_information>false</generate_extended_information>
+      <generate_code_modified_registers_only>false</generate_code_modified_registers_only>
+   </preferences>
+   <tools>
+      <pins name="Pins" version="7.0" enabled="true" update_project_code="true">
+         <pins_profile>
+            <processor_version>7.0.1</processor_version>
+            <power_domains/>
+            <pin_labels>
+               <pin_label pin_num="H6" pin_signal="SAI2_RXD0" label="R1" identifier="R1"/>
+               <pin_label pin_num="J5" pin_signal="SAI2_TXC" label="R2" identifier="R2"/>
+               <pin_label pin_num="H5" pin_signal="SAI2_MCLK" label="R3" identifier="R3"/>
+               <pin_label pin_num="H4" pin_signal="SAI2_TXFS" label="R4" identifier="R4"/>
+               <pin_label pin_num="H3" pin_signal="SAI2_RXC" label="R5" identifier="R5"/>
+               <pin_label pin_num="J4" pin_signal="SAI2_RXFS" label="R6" identifier="R6"/>
+               <pin_label pin_num="K4" pin_signal="SAI5_MCLK" label="R7" identifier="R7"/>
+               <pin_label pin_num="K5" pin_signal="SAI5_RXD3" label="R8" identifier="R8"/>
+               <pin_label pin_num="T7" pin_signal="GPIO1_IO01" label="R9" identifier="R9"/>
+               <pin_label pin_num="J6" pin_signal="GPIO1_IO15" label="R10" identifier="R10"/>
+               <pin_label pin_num="N5" pin_signal="GPIO1_IO06" label="R11" identifier="R11"/>
+               <pin_label pin_num="P4" pin_signal="GPIO1_IO03" label="R12" identifier="R12"/>
+               <pin_label pin_num="M7" pin_signal="GPIO1_IO10" label="R13" identifier="R13"/>
+               <pin_label pin_num="L7" pin_signal="GPIO1_IO12" label="R14" identifier="R14"/>
+               <pin_label pin_num="K7" pin_signal="GPIO1_IO14" label="R15" identifier="R15"/>
+               <pin_label pin_num="K6" pin_signal="GPIO1_IO13" label="R16" identifier="R16"/>
+               <pin_label pin_num="N4" pin_signal="SAI5_RXFS" label="FrtPnlUp" identifier="FrtPnlUp"/>
+               <pin_label pin_num="M4" pin_signal="SAI5_RXD2" label="FrtPnlDn" identifier="FrtPnlDn"/>
+               <pin_label pin_num="M5" pin_signal="SAI5_RXD0" label="FrtPnlOk" identifier="FrtPnlOk"/>
+               <pin_label pin_num="J1" pin_signal="SAI1_RXD4" label="CodecSideEnDrv" identifier="CodecSideEnDrv"/>
+               <pin_label pin_num="L6" pin_signal="GPIO1_IO11" label="CodecSideIn" identifier="CodecSideIn"/>
+            </pin_labels>
+         </pins_profile>
+         <functions_list>
+            <function name="BOARD_InitPins">
+               <description>Configures pin routing and optionally pin electrical features.</description>
+               <options>
+                  <callFromInitBoot>false</callFromInitBoot>
+                  <coreID>a53_0</coreID>
+               </options>
+               <dependencies/>
+               <pins>
+                  <pin peripheral="GPIO4" signal="gpio_io, 23" pin_num="H6" pin_signal="SAI2_RXD0">
+                     <pin_features>
+                        <pin_feature name="direction" value="INPUT"/>
+                        <pin_feature name="PUE" value="Disabled"/>
+                        <pin_feature name="DSE" value="OHM_45"/>
+                     </pin_features>
+                  </pin>
+                  <pin peripheral="GPIO4" signal="gpio_io, 25" pin_num="J5" pin_signal="SAI2_TXC">
+                     <pin_features>
+                        <pin_feature name="direction" value="INPUT"/>
+                        <pin_feature name="PUE" value="Disabled"/>
+                     </pin_features>
+                  </pin>
+                  <pin peripheral="GPIO4" signal="gpio_io, 27" pin_num="H5" pin_signal="SAI2_MCLK"/>
+                  <pin peripheral="GPIO4" signal="gpio_io, 24" pin_num="H4" pin_signal="SAI2_TXFS">
+                     <pin_features>
+                        <pin_feature name="LVTTL" value="Disabled"/>
+                        <pin_feature name="PUE" value="Disabled"/>
+                        <pin_feature name="VSEL" value="VSEL_0"/>
+                     </pin_features>
+                  </pin>
+                  <pin peripheral="GPIO4" signal="gpio_io, 22" pin_num="H3" pin_signal="SAI2_RXC"/>
+                  <pin peripheral="GPIO4" signal="gpio_io, 21" pin_num="J4" pin_signal="SAI2_RXFS"/>
+                  <pin peripheral="GPIO3" signal="gpio_io, 25" pin_num="K4" pin_signal="SAI5_MCLK"/>
+                  <pin peripheral="GPIO3" signal="gpio_io, 24" pin_num="K5" pin_signal="SAI5_RXD3"/>
+                  <pin peripheral="GPIO1" signal="gpio_io, 01" pin_num="T7" pin_signal="GPIO1_IO01"/>
+                  <pin peripheral="GPIO1" signal="gpio_io, 15" pin_num="J6" pin_signal="GPIO1_IO15"/>
+                  <pin peripheral="GPIO1" signal="gpio_io, 06" pin_num="N5" pin_signal="GPIO1_IO06"/>
+                  <pin peripheral="GPIO1" signal="gpio_io, 03" pin_num="P4" pin_signal="GPIO1_IO03"/>
+                  <pin peripheral="GPIO1" signal="gpio_io, 10" pin_num="M7" pin_signal="GPIO1_IO10"/>
+                  <pin peripheral="GPIO1" signal="gpio_io, 12" pin_num="L7" pin_signal="GPIO1_IO12"/>
+                  <pin peripheral="GPIO1" signal="gpio_io, 14" pin_num="K7" pin_signal="GPIO1_IO14"/>
+                  <pin peripheral="GPIO1" signal="gpio_io, 13" pin_num="K6" pin_signal="GPIO1_IO13"/>
+                  <pin peripheral="GPIO3" signal="gpio_io, 19" pin_num="N4" pin_signal="SAI5_RXFS"/>
+                  <pin peripheral="GPIO3" signal="gpio_io, 23" pin_num="M4" pin_signal="SAI5_RXD2"/>
+                  <pin peripheral="GPIO3" signal="gpio_io, 21" pin_num="M5" pin_signal="SAI5_RXD0"/>
+                  <pin peripheral="GPIO4" signal="gpio_io, 06" pin_num="J1" pin_signal="SAI1_RXD4"/>
+                  <pin peripheral="GPIO1" signal="gpio_io, 11" pin_num="L6" pin_signal="GPIO1_IO11"/>
+               </pins>
+            </function>
+         </functions_list>
+      </pins>
+      <ddr name="DDR" version="1.0" enabled="false" update_project_code="true">
+         <components/>
+      </ddr>
+      <periphs name="Peripherals" version="7.0" enabled="false" update_project_code="true">
+         <peripherals_profile>
+            <processor_version>N/A</processor_version>
+         </peripherals_profile>
+         <functional_groups/>
+         <components/>
+      </periphs>
+   </tools>
+</configuration>
